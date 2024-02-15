@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+    <title>じゃんけん</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>じゃんけん</h1>
+    </header>
+
+    <main>
+        <ul>
+            <li id="gu_btn">グー</li>
+            <li id="cho_btn">チョキ</li>
+            <li id="par_btn">パー</li>
+        </ul>
+        <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
+        <div id="judgment">勝ち</div>
+    </main>
+
+    <footer></footer>
+    <script>
+        // グーを選んだ場合、コンピュータが出す３通り×結果パターン
+   $("#gu_btn").on("click", function(){
+    let gu = 1;
+    let pc = Math.ceil(Math.random()*3);
+    if(pc == 1){
+    $("#pc_hands").text("グー")
+$("#judgment").text("あいこ")
+   }else if(pc == 2){
+    $("#pc_hands").text("チョキ")
+    $("#judgment").text("勝ち")
+   }
+   else if(pc == 3){
+    $("#pc_hands").text("パー")
+    $("#judgment").text("負け")
+   }
+});
+
+    // チョキを選んだ場合
+$("#cho_btn").on("click", function(){
+    let cho = 2;
+    let pc = Math.ceil(Math.random()*3);
+    if(pc == 1){
+    $("#pc_hands").text("グー")
+$("#judgment").text("負け")
+   }else if(pc == 2){
+    $("#pc_hands").text("チョキ")
+    $("#judgment").text("あいこ")
+   }
+   else if(pc == 3){
+    $("#pc_hands").text("パー")
+    $("#judgment").text("勝ち")
+   }
+});
+
+// パーを選んだ場合
+$("#par_btn").on("click", function(){
+    let par = 3;
+    let pc = Math.ceil(Math.random()*3);
+    if(pc == 1){
+    $("#pc_hands").text("グー")
+$("#judgment").text("勝ち")
+   }else if(pc == 2){
+    $("#pc_hands").text("チョキ")
+    $("#judgment").text("負け")
+   }
+   else if(pc == 3){
+    $("#pc_hands").text("パー")
+    $("#judgment").text("あいこ")
+   }
+});
+   
+    </script>
+</body>
+
+</html>

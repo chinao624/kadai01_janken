@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample_ver2.css">
+    <title>学部サーチ</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="clark">
+        <h1>あなたにおすすめの学部は？</h1>
+        <img src="./img/クラーク博士.jpg" alt="大志を抱け" width="200px">
+            </div>
+    </header>
+
+    <main>
+       
+        <!-- <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
+        <div id="judgment">勝ち</div> -->
+
+         <!-- 1度目に出る２択を表示 -->
+         <div class="first">
+            <button id="bun_btn"><img src="./img/shakai.jpg" height ="250" width ="400" /></button>
+            <button id="ri_btn"><img src="./img/rika.jpg" height ="250" width ="400" /></button>
+            </div>
+
+        <!-- ２度目に出る２択を表示 -->
+        <div class="second">
+            <button id="bun_btn2"><img src="./img/海外旅行派.jpg" height ="250" width ="400" /></button>
+            <button id="ri_btn2"><img src="./img/国内旅行派.jpg" height ="250" width ="400" /></button>
+                  </div>
+
+                  <!-- ３度目に出る２択を表示 -->
+        <div class="third">
+            <button id="bun_btn3"><img src="./img/感情的.jpg" height ="250" width ="400" /></button>
+            <button id="ri_btn3"><img src="./img/論理的.jpg" height ="250" width ="400" /></button>
+                  </div>
+
+        
+    </main>
+
+    <footer></footer>
+    <script>
+
+// 最後の判定画面
+
+    // 最初に出ていてほしくない３枚目の２択をここに書く
+   $('.third').hide();
+    
+    // 最初に出ていてほしくない２枚目の２択
+    $('.second').hide();
+
+ //  どちらを押しても、今のボタンが消えて新しい２択ボタンが出るようにしたい
+    $("#bun_btn").on("click", function(){
+        $('.first').hide();
+        $('.second').show();
+    });
+      
+    $("#ri_btn").on("click", function(){
+        $('.first').hide();
+        $('.second').show();
+    });
+
+    // ２枚目の２択ボタンを押したときに３枚めになる設定
+    $("#bun_btn2").on("click", function(){
+        $('.second').hide();
+        $('.third').show();
+    });
+      
+    $("#ri_btn2").on("click", function(){
+        $('.second').hide();
+        $('.third').show();
+    });
+
+    // 3枚目の２択ボタンを押したときに結果画面になる設定
+    $("#bun_btn3").on("click", function(){
+        $('.third').hide();
+
+    });
+      
+    $("#ri_btn3").on("click", function(){
+        $('.third').hide();
+
+    });
+    
+
+//    $("#bun_btn").on("click", function(){
+//     let gu = 1;
+//     let pc = Math.ceil(Math.random()*3);
+//     if(pc == 1){
+//     $("#pc_hands").text("グー")
+// $("#judgment").text("あいこ")
+//    }else if(pc == 2){
+//     $("#pc_hands").text("チョキ")
+//     $("#judgment").text("勝ち")
+//    }
+//    else if(pc == 3){
+//     $("#pc_hands").text("パー")
+//     $("#judgment").text("負け")
+//    }
+// });
+    
+// $("#cho_btn").on("click", function(){
+//     let cho = 2;
+//     let pc = Math.ceil(Math.random()*3);
+//     if(pc == 1){
+//     $("#pc_hands").text("グー")
+// $("#judgment").text("負け")
+//    }else if(pc == 2){
+//     $("#pc_hands").text("チョキ")
+//     $("#judgment").text("あいこ")
+//    }
+//    else if(pc == 3){
+//     $("#pc_hands").text("パー")
+//     $("#judgment").text("勝ち")
+//    }
+// });
+
+// $("#par_btn").on("click", function(){
+//     let par = 3;
+//     let pc = Math.ceil(Math.random()*3);
+//     if(pc == 1){
+//     $("#pc_hands").text("グー")
+// $("#judgment").text("勝ち")
+//    }else if(pc == 2){
+//     $("#pc_hands").text("チョキ")
+//     $("#judgment").text("負け")
+//    }
+//    else if(pc == 3){
+//     $("#pc_hands").text("パー")
+//     $("#judgment").text("あいこ")
+//    }
+// });
+   
+//     </script>
+ </body>
+
+</html>
