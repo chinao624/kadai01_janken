@@ -41,13 +41,30 @@
             <button id="ri_btn3"><img src="./img/論理的.jpg" height ="250" width ="400" /></button>
                   </div>
 
+        <!-- resultカードの表記 -->
+    
+        <div id="result1">
+            <h3 class="result-ttl">ああああああああああああああああああああ</h3>
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                  </div>
+
+                  <div id="result2">
+                    <h3 class="result-ttl">ああああああああああああああああああああ</h3>
+                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                          </div>
         
     </main>
 
     <footer></footer>
     <script>
 
-// 最後の判定画面
+
+// 結果画面を隠す
+$('#result1').hide();
+$('#result2').hide();
+
 
     // 最初に出ていてほしくない３枚目の２択をここに書く
    $('.third').hide();
@@ -80,14 +97,17 @@
     // 3枚目の２択ボタンを押したときに結果画面になる設定
     $("#bun_btn3").on("click", function(){
         $('.third').hide();
-
     });
       
     $("#ri_btn3").on("click", function(){
         $('.third').hide();
-
     });
+   
     
+// 結果をif文で出す
+// letでボタンを数字化できないか？
+
+
 
 //    $("#bun_btn").on("click", function(){
 //     let gu = 1;

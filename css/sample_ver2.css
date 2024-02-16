@@ -35,12 +35,12 @@ footer{
     border-bottom:1px solid #FFF;
     text-align: center;
 }
-p{
+/* p{
     font-size:200%;
     text-align: center;
     border-bottom:1px solid #fff;
     height:200px;
-}
+} */
 
 
 /* .firstのほうの指定 */
@@ -109,4 +109,32 @@ p{
     opacity: 0.7;
 }
 
+/* 結果画面 */
+#result1{
+   	margin: 20px auto 20px 20px;
+	padding: 20px;
+	border: 7px solid #434343;
+}
 
+.result-ttl{
+    position: relative;
+    left: -40px;
+    background-color: #add8e6;
+    color: #fff;
+    padding: 0.5em 1em;
+    margin: 0;
+    width: 60%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#result2{
+    margin: 20px auto 20px 20px;
+ padding: 20px;
+ border: 7px solid #434343;
+}
+
+p{
+    font-size: 16px;
+    line-height: 20px;
+}
