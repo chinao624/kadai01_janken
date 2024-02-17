@@ -1,163 +1,213 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <script src="js/jquery-2.1.3.min.js"></script>
-    <link rel="stylesheet" href="css/sample_ver2.css">
+    <link rel="stylesheet" href="css/sample_ver2.css" />
     <title>学部サーチ</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div class="clark">
+      <div class="clark">
         <h1>あなたにおすすめの学部は？</h1>
-        <img src="./img/クラーク博士.jpg" alt="大志を抱け" width="200px">
-            </div>
+        <img src="./img/クラーク博士.jpg" alt="大志を抱け" width="200px" />
+      </div>
     </header>
 
     <main>
-       
-        <!-- <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
-        <div id="judgment">勝ち</div> -->
+   
+      <!-- 1度目に出る２択を表示 -->
+      <div class="first">
+        <button id="bun_btn">
+          <img src="./img/shakai.jpg" height="250" width="400" />
+        </button>
+        <button id="ri_btn">
+          <img src="./img/rika.jpg" height="250" width="400" />
+        </button>
+      </div>
 
-         <!-- 1度目に出る２択を表示 -->
-         <div class="first">
-            <button id="bun_btn"><img src="./img/shakai.jpg" height ="250" width ="400" /></button>
-            <button id="ri_btn"><img src="./img/rika.jpg" height ="250" width ="400" /></button>
-            </div>
+      <!-- ２度目に出る２択を表示 -->
+      <div class="second">
+        <button id="bun_btn2">
+          <img src="./img/海外旅行派.jpg" height="250" width="400" />
+        </button>
+        <button id="ri_btn2">
+          <img src="./img/国内旅行派.jpg" height="250" width="400" />
+        </button>
+      </div>
 
-        <!-- ２度目に出る２択を表示 -->
-        <div class="second">
-            <button id="bun_btn2"><img src="./img/海外旅行派.jpg" height ="250" width ="400" /></button>
-            <button id="ri_btn2"><img src="./img/国内旅行派.jpg" height ="250" width ="400" /></button>
-                  </div>
+      <!-- ３度目に出る２択を表示 -->
+      <div class="third">
+        <button id="bun_btn3">
+          <img src="./img/感情的.jpg" height="250" width="400" />
+        </button>
+        <button id="ri_btn3">
+          <img src="./img/論理的.jpg" height="250" width="400" />
+        </button>
+      </div>
 
-                  <!-- ３度目に出る２択を表示 -->
-        <div class="third">
-            <button id="bun_btn3"><img src="./img/感情的.jpg" height ="250" width ="400" /></button>
-            <button id="ri_btn3"><img src="./img/論理的.jpg" height ="250" width ="400" /></button>
-                  </div>
+      <!-- resultカードの表記 -->
+<div class="result">
+      <div id="result1">
+        <h3 class="result-ttl">おすすめは、ハートで次世代を育てる教育学部</h3>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+      </div>
+    </div>
 
-        <!-- resultカードの表記 -->
-    
-        <div id="result1">
-            <h3 class="result-ttl">ああああああああああああああああああああ</h3>
-            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                  </div>
+      <div id="result2">
+        <h3 class="result-ttl">おすすめは、豊かな感性を生かす美術系学部</h3>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+      </div>
 
-                  <div id="result2">
-                    <h3 class="result-ttl">ああああああああああああああああああああ</h3>
-                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                          </div>
-        
+      <div id="result3">
+        <h3 class="result-ttl">おすすめは、先人の思いを読み解く文学部</h3>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+      </div>
+
+      <div id="result4">
+        <h3 class="result-ttl">おすすめは、コミュニケーション力を生かす外国語学部</h3>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+      </div>
+
+      <div id="result5">
+        <h3 class="result-ttl">おすすめは、</h3>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+      </div>
+
+      <div id="result6">
+        <h3 class="result-ttl">ああああああああああああああああああああ</h3>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+      </div>
+
+      <div id="result7">
+        <h3 class="result-ttl">ああああああああああああああああああああ</h3>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+      </div>
+
+      <div id="result8">
+        <h3 class="result-ttl">ああああああああああああああああああああ</h3>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+        <p>
+          aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </p>
+      </div>
+
     </main>
 
     <footer></footer>
     <script>
+      // 結果画面を隠す
+      $("#result1").hide();
+      $("#result2").hide();
+      $("#result3").hide();
+      $("#result4").hide();
+      $("#result5").hide();
+      $("#result6").hide();
+      $("#result7").hide();
+      $("#result8").hide();
 
+      // 最初に出ていてほしくない３枚目の２択
+      $(".third").hide();
 
-// 結果画面を隠す
-$('#result1').hide();
-$('#result2').hide();
+      // 最初に出ていてほしくない２枚目の２択
+      $(".second").hide();
 
+      //  どちらを押しても、今のボタンが消えて新しい２択ボタンが出るようにしたい
+      $("#bun_btn").on("click", function () {
+        $(".first").hide();
+        $(".second").show();
+      });
 
-    // 最初に出ていてほしくない３枚目の２択をここに書く
-   $('.third').hide();
-    
-    // 最初に出ていてほしくない２枚目の２択
-    $('.second').hide();
+      $("#ri_btn").on("click", function () {
+        $(".first").hide();
+        $(".second").show();
+      });
 
- //  どちらを押しても、今のボタンが消えて新しい２択ボタンが出るようにしたい
-    $("#bun_btn").on("click", function(){
-        $('.first').hide();
-        $('.second').show();
-    });
-      
-    $("#ri_btn").on("click", function(){
-        $('.first').hide();
-        $('.second').show();
-    });
+      // ２枚目の２択ボタンを押したときに３枚めになる設定
+      $("#bun_btn2").on("click", function () {
+        $(".second").hide();
+        $(".third").show();
+      });
 
-    // ２枚目の２択ボタンを押したときに３枚めになる設定
-    $("#bun_btn2").on("click", function(){
-        $('.second').hide();
-        $('.third').show();
-    });
-      
-    $("#ri_btn2").on("click", function(){
-        $('.second').hide();
-        $('.third').show();
-    });
+      $("#ri_btn2").on("click", function () {
+        $(".second").hide();
+        $(".third").show();
+      });
 
-    // 3枚目の２択ボタンを押したときに結果画面になる設定
-    $("#bun_btn3").on("click", function(){
-        $('.third').hide();
-    });
-      
-    $("#ri_btn3").on("click", function(){
-        $('.third').hide();
-    });
-   
-    
-// 結果をif文で出す
-// letでボタンを数字化できないか？
+      // 3枚目の２択ボタンを押したときに結果画面になる設定
+      $("#bun_btn3").on("click", function () {
+        $(".third").hide();
+        let pc = Math.ceil(Math.random() * 4);
+        if (pc == 1) {
+          $("#result1").show();
+        } else if (pc == 2) {
+          $("#result2").show();
+        }
+        else if (pc == 3) {
+          $("#result3").show();
+        }
+        else if (pc == 4) {
+          $("#result4").show();
+        }
+      });
 
+      $("#ri_btn3").on("click", function () {
+        $(".third").hide();
+        let pc = Math.ceil(Math.random() * 4);
+        if (pc == 1) {
+          $("#result5").show();
+        } else if (pc == 2) {
+          $("#result6").show();
+        }
+        else if (pc == 3) {
+          $("#result7").show();
+        }
+        else if (pc == 4) {
+          $("#result8").show();
+        }
+      });
 
-
-//    $("#bun_btn").on("click", function(){
-//     let gu = 1;
-//     let pc = Math.ceil(Math.random()*3);
-//     if(pc == 1){
-//     $("#pc_hands").text("グー")
-// $("#judgment").text("あいこ")
-//    }else if(pc == 2){
-//     $("#pc_hands").text("チョキ")
-//     $("#judgment").text("勝ち")
-//    }
-//    else if(pc == 3){
-//     $("#pc_hands").text("パー")
-//     $("#judgment").text("負け")
-//    }
-// });
-    
-// $("#cho_btn").on("click", function(){
-//     let cho = 2;
-//     let pc = Math.ceil(Math.random()*3);
-//     if(pc == 1){
-//     $("#pc_hands").text("グー")
-// $("#judgment").text("負け")
-//    }else if(pc == 2){
-//     $("#pc_hands").text("チョキ")
-//     $("#judgment").text("あいこ")
-//    }
-//    else if(pc == 3){
-//     $("#pc_hands").text("パー")
-//     $("#judgment").text("勝ち")
-//    }
-// });
-
-// $("#par_btn").on("click", function(){
-//     let par = 3;
-//     let pc = Math.ceil(Math.random()*3);
-//     if(pc == 1){
-//     $("#pc_hands").text("グー")
-// $("#judgment").text("勝ち")
-//    }else if(pc == 2){
-//     $("#pc_hands").text("チョキ")
-//     $("#judgment").text("負け")
-//    }
-//    else if(pc == 3){
-//     $("#pc_hands").text("パー")
-//     $("#judgment").text("あいこ")
-//    }
-// });
-   
-//     </script>
- </body>
-
+      // 結果をif文で出す
+      // letでボタンを数字化できないか？→わからない。。
+    </script>
+  </body>
 </html>

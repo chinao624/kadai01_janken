@@ -111,7 +111,7 @@ footer{
 
 /* 結果画面 */
 #result1{
-   	margin: 20px auto 20px 20px;
+   	margin: 50px auto 20px 20px;
 	padding: 20px;
 	border: 7px solid #434343;
 }
@@ -128,13 +128,50 @@ footer{
     font-weight: bold;
 }
 
-#result2{
-    margin: 20px auto 20px 20px;
- padding: 20px;
- border: 7px solid #434343;
-}
-
 p{
     font-size: 16px;
     line-height: 20px;
 }
+
+#result2{
+    margin: 50px auto 20px 20px;
+ padding: 20px;
+ border: 7px solid #434343;
+}
+
+#result3{
+    margin: 50px auto 20px 20px;
+ padding: 20px;
+ border: 7px solid #434343;
+}
+
+#result4{
+    margin: 50px auto 20px 20px;
+ padding: 20px;
+ border: 7px solid #434343;
+}
+
+#result5{
+    margin: 50px auto 20px 20px;
+ padding: 20px;
+ border: 7px solid #434343;
+}
+
+#result6{
+    margin: 50px auto 20px 20px;
+ padding: 20px;
+ border: 7px solid #434343;
+}
+
+#result7{
+    margin: 50px auto 20px 20px;
+ padding: 20px;
+ border: 7px solid #434343;
+}
+
+#result8{
+    margin: 50px auto 20px 20px;
+ padding: 20px;
+ border: 7px solid #434343;
+}
+
